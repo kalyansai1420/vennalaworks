@@ -1,0 +1,117 @@
+.contact{
+    height: fit-content;
+    width: 100vw;
+    background-color: #18191A;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+.contact__left{
+    padding-top: 100px;
+    flex: 0.5;
+    margin-left: 100px;
+    color: #fff;
+    /* background-color: #444; */
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 100px;
+
+}
+.contact__left h2{
+    font-size: 2em;
+    width: 70%;
+
+}
+.contact__left p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    width: 80%;
+}
+.contact__left .contact__details{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.contact__left .contact__details a{
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact__right{
+    flex: 0.5;
+    background-color: #111;
+    margin: 50px;
+    color: #fff;
+}
+.contact__right h2{
+    font-size: 2em;
+    padding-top: 50px;
+    text-align: center;
+
+}
+@media only screen and (max-width: 1000px) {
+ .contact{
+     display: flex;
+     flex-direction: column;
+ }   
+ .contact__left{
+     margin: 0 auto;
+     /* background-color: pink; */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     text-align: center;
+ }
+ .contact__left p {
+    font-size: 1em;
+    /* display: table; */
+    text-align: justify;
+    font-size: 3.3vw;
+    width: 80%;
+}
+.contact__details h3{
+    font-size: 2em;
+}
+.contact__details a{
+    font-size: 1.8em;
+}
+}
+
+@media only screen and (max-width: 500px) {
+    .contact{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .contact__left{
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    .contact__left .contact-title{
+        font-size: 1.5em;
+    }
+    .contact__left p {
+        font-size: 1.5em;
+        /* display: table; */
+        text-align: justify;
+        font-size: 5.3vw;
+        width: 100%;
+    }
+    .contact__details{
+        display: flex;
+    }
+    .contact__right{
+        margin: 20px;
+    }
+    .contact__details h3{
+        font-size: 1.5em;
+    }
+    .contact__details a{
+        font-size: 1.3em;
+    }
+}

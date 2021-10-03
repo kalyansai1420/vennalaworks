@@ -1,0 +1,117 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    background-color: #111;
+    /* background: linear-gradient(180deg, rgba(6, 6, 6, 0) -33.19%, #060606 100%); */
+   
+
+
+}
+.about__left{
+    /* flex: 0.5; */
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin-left: 100px;
+}
+.about__left .title{
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+.about__left p{
+    width: 70%;
+    font-size: 1.5em;
+}
+
+.about__right{
+    /* flex: 0.5; */
+    width: 50vw;
+    
+    background: url(../Images/about.jpg);
+    /* background-position: center; */
+    background-position: right;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+}
+
+
+
+.hero-btn {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+.hero-btn .btn {
+    font-size: 1em;
+    color: #fff;
+    /* background-color: #555; */
+    background: #222020;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+/* background-color: pink; */
+    display: inline;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+  }
+  /* .btn:hover {
+    letter-spacing: 6px;
+  } */
+
+  @media only screen and (max-width: 1000px) {
+    .about{
+        min-height: 50vh;
+        height: fit-content;
+
+    }
+    .about__left{
+        margin-left: 20px;
+    }
+    .about__left .title{
+        margin-bottom: 50px;
+        font-size: 1.5em;
+    }
+    .about__left p{
+        width: 70%;
+        font-size: 0.75em;
+    }
+    .hero-btn{
+        margin-top: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .about{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding-top:50px ;
+        height: 70vh;
+    }
+    .about__left{
+        /* margin: 0 auto; */
+        width: 90%;
+    }
+    .about__left .title{
+        text-align: left;
+    }
+    .about__left p{
+        text-align: justify;
+        font-size: 4.3vw;
+        width: 100%;
+    }
+    .about__right{
+        width: 100vw;
+    }
+    .hero-btn{
+        margin-top: 50px;
+    }
+}

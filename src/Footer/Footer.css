@@ -1,0 +1,110 @@
+.footer{
+    height: fit-content;
+    padding: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
+
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer__left{
+    margin-left: 50px;
+}
+.footer__left svg{
+    margin-top: -20px;
+}
+.footer__middle{
+    display: flex ;
+    flex-direction: row ;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+.footer__middle a{
+    margin-left: 40px;
+    
+
+
+}
+.footer__right{
+    margin-right: 50px;
+}
+.footer__right__socialicons a{
+    margin-top: 10px;
+    padding-top: 50px;
+    margin-left: 10px;
+    font-size: 40px;
+    /* background-color: pink; */
+}
+
+@media only screen and (max-width: 1000px) {
+    .footer{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__left{
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    .footer__middle{
+        display: flex;
+        flex-direction: column; 
+    }
+    .footer__right{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 60px;
+    }
+    .footer__middle li{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__left{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+    .footer__left svg{
+        margin-top: -20px;
+        margin-left: 10px ;
+    }
+    .footer__middle{
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+    }
+    .footer__middle li{
+        margin-top: 30px;
+    }  
+    .footer__middle li a{
+        margin-left: 10px;
+        /* margin-top: 50px !important; */
+        /* padding-top: 50px; */
+        /* background-color: blue; */
+        /* margin-bottom: 50px; */
+    }
+    .footer__right{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+}

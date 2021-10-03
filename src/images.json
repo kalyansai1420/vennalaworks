@@ -1,0 +1,16 @@
+{
+    "products": [
+       {
+          "name": "Levis Blue Denim",
+          "imgPath": "images/prods/levisbluedemin01.jpg"
+       },
+       {
+          "name": "Pepe Black Jeans",
+          "imgPath": "images/prods/pepeblackjeans01.jpg"
+       },
+       {
+          "name": "Pepe Blue Jeans",
+          "imgPath": "images/prods/pepebluejeans01.jpg"
+       }
+   ]
+ }
