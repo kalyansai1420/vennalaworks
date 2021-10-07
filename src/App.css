@@ -12,7 +12,9 @@
 ::-webkit-scrollbar {
   display: none;
 }
-
+.app{
+  background: radial-gradient(82.41% 82.41% at 50% 50%, #373839 2.61%, #18191A 75.24%) !important;
+}
 
 /* .App {
   text-align: center;

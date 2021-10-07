@@ -11,10 +11,10 @@ const Contact = () => {
                 <br />
                 <div className="contact__details">
                     <h3>Phone</h3>
-                    <a href="tel:+7337356899">+91 7337356899</a>
+                    <a href="tel:+7337356899">+91 54868-24568</a>
                     <br />
                     <h3>Email</h3>
-                    <a href="mailto:vennelaworks@gmail.com">vennelaworks@gmail.com</a>
+                    <a href="mailto:vennelaworks25@gmail.com">vennelaworks25@gmail.com</a>
                 </div>
                 
 

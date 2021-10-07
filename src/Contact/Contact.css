@@ -20,6 +20,8 @@
 .contact__left h2{
     font-size: 2em;
     width: 70%;
+    font-weight: 600;  
+
 
 }
 .contact__left p{
@@ -48,8 +50,12 @@
     font-size: 2em;
     padding-top: 50px;
     text-align: center;
-
+        font-weight: 600;  
 }
+.contact__details a{
+        font-size: 1.3em;
+    }
+
 @media only screen and (max-width: 1000px) {
  .contact{
      display: flex;
@@ -74,6 +80,8 @@
 }
 .contact__details h3{
     font-size: 2em;
+    font-weight: 100;
+
 }
 .contact__details a{
     font-size: 1.8em;
@@ -110,8 +118,16 @@
     }
     .contact__details h3{
         font-size: 1.5em;
+        font-weight: 100;
     }
     .contact__details a{
         font-size: 1.3em;
+    }
+}
+@media only screen and (max-width: 350px) {
+
+    
+    .contact__details a{
+        font-size: 1em;
     }
 }

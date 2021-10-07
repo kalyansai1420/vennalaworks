@@ -7,6 +7,7 @@ const Portfoliopage = ({list}) => {
         
         <div className="portfoliopage">
             <h2 className="port__title">Our Portfolio</h2>
+            
             <div className="port__cards">
                 {list.items.map((item,index)=>(
                 <PortfolioCard key={index} item={item}/>

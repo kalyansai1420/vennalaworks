@@ -5,28 +5,17 @@ import { useHistory } from 'react-router-dom';
 
 const PortfolioCard = ({item}) => {
     const history = useHistory();
-
-
-
     const portfolio_details = () =>{
-        history.push("/portfolio/ProductDetails",{id:item.id,
-            //image:item.image, // No Need 
-            //title:item.title, // No Need 
-            //location:item.location, // No Need 
-            //area:item.area, // No Need 
-            //content:item.content, // No Need 
-            //moreImages:item.moreImages // No Need 
-
-
+        history.push("/portfolio/ProductDetails", {
+            id: item.id,
         })
     }
     return (
-        //  <div className="portfoliocard" onClick={() => portfolio_details(item.id)} > 
-        <div className="portfoliocard" onClick={() => history.push("/portfolio/ProductDetails", { id: item.id })}>
+        <div className="portfoliocard ske-portfoliocard" onClick={() => history.push("/portfolio/ProductDetails", { id: item.id })}>
             <img src={item.image} alt={item.title} className="portcard__image"/>
-            <div className="portcard__desc">
-                <h4>{item.title}</h4>
-                <h5>{item.location}</h5>
+            <div className="portcard__desc hide-text">
+                <h4>{item.projecttitle}</h4>
+                <h4>{item.worktype}</h4>
             </div>
         </div>
     )

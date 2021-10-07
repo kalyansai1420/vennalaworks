@@ -28,6 +28,7 @@ export const ContactUs = () => {
       <label>Message</label>
       <textarea name="message" />
       {/* <input type="submit" value="Send" /> */}
+      <br />
       <button type="submit" value="Send"  class="btn">Send Mail</button>
     </form>
   );

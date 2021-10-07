@@ -3,8 +3,8 @@ import './ProductDetails.css'
 import {useLocation} from "react-router-dom";
 import Data from '../Data';
 import '../images.json';
-import ImageGallery from 'react-image-gallery';
-import Carousel from 'react-elastic-carousel';
+import Carousel from 'react-gallery-carousel';
+import 'react-gallery-carousel/dist/index.css';
 
 
 
@@ -13,6 +13,8 @@ const ProductDetails = (item) => {
   const loc = useLocation();
   const iD = loc.state.id;
   const data = Data[0].items[iD]
+  const [des, setDes] = useState('');
+
   const breakPoints1 = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 1 },
@@ -25,9 +27,23 @@ const ProductDetails = (item) => {
     { width: 768, itemsToShow: 3 },
     { width: 1200, itemsToShow: 3 },
   ];
+  useEffect(() => {
+    const desData = data.content.split('<br/>').map((t) => {
+      return (
+        <text>
+          {t}
+          <br />
+        </text>
+      );
+    });
+    setDes(desData);
+  }, [data.content]);
 
 
   return (< div className="productdetails" >
+    <div className="prod__title">
+      <h2>{ data.title}</h2>
+    </div>
     <div className="prod" >
       <div className="prod__left" >
         <div className="img-box" >
@@ -35,36 +51,34 @@ const ProductDetails = (item) => {
         </div >
       </div>
       <div className="prod__right" >
+        <h2>{ data.owner}</h2>
         <h2 > Location: {data.location} </h2>
-        <p > Area: {data.area} </p>
+        <h2 > Area: {data.area} </h2>
+        <h2> { data.date}</h2>
       </div >
     </div>
     <div className="prod__content" >
-      <h3 > Description </h3> <p> { data.content}</p>
+      <h2 > Description </h2>
+      <p> {des}</p>
     </div>
   
-    <Carousel className="img_gallery_1" breakPoints={breakPoints1} enableAutoPlay
-      autoPlaySpeed={2500} showArrows={false} pagination={false} >
-    {data.images.map((res, index) => {
-      return (
-        
-          <img className="img_1" key={index} src={res.bannerImg1} alt={index} />
-        
-          )
-        
-    })}
+    <Carousel className="img_gallery_1"
+      
+      hasIndexBoard={false}
+      style={{
+        backgroundColor: "black",
+
+      }}
+    >
+        {
+          data.images.map((res, index) => {
+            return (
+              <img className="img_1" key={index} src={res.bannerImg1} alt={index} />
+            )
+          })
+        }
     </Carousel>
-    <Carousel className="img_gallery_2" breakPoints={breakPoints2} enableAutoPlay
-      autoPlaySpeed={2500}>
-      {data.images.map((res, index) => {
-        return (
-
-          <img className="img_2" key={index} src={res.bannerImg1} alt={index} />
-
-        )
-
-      })}
-    </Carousel>
+   
 
 
   </div>

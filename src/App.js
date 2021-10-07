@@ -13,34 +13,37 @@ import HomeSkeletonCard from './Home/HomeSkeletonCard';
 import NavBar from './Nav/NavBar';
 import ProductDetails from './ProductDetails/ProductDetails';
 import Portfoliopage from './PortfolioPage/Portfoliopage';
+import AboutSkeletonCard from './About/AboutSkeletonCard';
+import PortfolioSkeletonCard from './Portfolio/PortfolioSkeletonCard';
+import ScrollToTop from './ScrollToTop';
+import Copyright from './Footer/Copyright';
+import ContactPage from './ContactPage/ContactPage';
 
 const App = () => {
   const [portfolio, setPortfolio] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [homeloading, setHomeloading] = useState(false);
   useEffect(() => {
     setHomeloading(true);
-    setLoading(true);
     const timing = setTimeout(() => {
       setPortfolio(Data);
       setHomeloading(false);
-      setLoading(false);
-    }, 1000);
+    }, 3500);
     return () => clearTimeout(timing);
   }, []);
-  // console.log(portfolio);
 
   return (
     <div className="app">
       <Router>
+        <ScrollToTop/>
         <NavBar />
         <Switch>
+          
           <Route path="/portfolio/ProductDetails">
             <ProductDetails />
           </Route>
           <Route path="/portfolio">
-            {loading && <SkeletonCard />}
-            {!loading && portfolio.map((list, index) => {
+            {homeloading && <SkeletonCard />}
+            {!homeloading && portfolio.map((list, index) => {
               return (
                 <div key={index}>
                   <Portfoliopage list={list} />
@@ -48,12 +51,18 @@ const App = () => {
               );
             })}
           </Route>
+          <Route path="/contact">
+            <ContactPage/>
+          </Route>
           <Route path="/">
             {homeloading && <HomeSkeletonCard />}
             {!homeloading && <Home />}
-            <About />
-            {loading && <SkeletonCard />}
-            {!loading && portfolio.map((list, index) => {
+
+            {homeloading && <AboutSkeletonCard />}
+            {!homeloading && <About />}
+
+            {homeloading && <PortfolioSkeletonCard />}
+            {!homeloading && portfolio.map((list, index) => {
               return (
                 <div key={index}>
                   <Portfolio list={list} />
@@ -65,8 +74,10 @@ const App = () => {
 
 
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
+      
+      <Copyright/>
 
 
 

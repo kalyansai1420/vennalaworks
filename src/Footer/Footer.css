@@ -34,19 +34,18 @@ a{
 }
 .footer__middle a{
     margin-left: 40px;
-    
-
-
 }
 .footer__right{
     margin-right: 50px;
 }
-.footer__right__socialicons a{
+.footer__right__title h2{
+    font-weight: 100;
+}
+.footer__right__socialicons{
     margin-top: 10px;
-    padding-top: 50px;
-    margin-left: 10px;
-    font-size: 40px;
-    /* background-color: pink; */
+}
+.footer__right__socialicons a{
+    margin-right: 25px;
 }
 
 @media only screen and (max-width: 1000px) {

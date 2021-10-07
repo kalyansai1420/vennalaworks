@@ -1,13 +1,13 @@
-import React from 'react'
-import Skeleton from 'react-loading-skeleton';
+// import React from 'react'
+// import Skeleton from 'react-loading-skeleton';
 
-const SkeletonCard = () => {
-    return (
-        <div className="card">
-            <Skeleton height={40} width={500}/>
+// const SkeletonCard = () => {
+//     return (
+//         <div className="card">
+//             <Skeleton height={40} width={500}/>
             
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default SkeletonCard
+// export default SkeletonCard

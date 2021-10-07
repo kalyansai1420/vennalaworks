@@ -23,11 +23,14 @@
   .nav-logo {
     color: #fff;
     align-items: center;
-    margin-left: 50px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
-    /* background-color: blue; */
+    margin-left: 30px;
+    margin-top: 10px;
+    /* flex-grow: 1; */
+  }
+  .nav-space{
     flex-grow: 1;
   }
   
@@ -63,10 +66,10 @@
     transition: width 0.7s ease, background-color 0.5s ease;
   }
   
-  .nav-item:hover:after {
+  /* .nav-item:hover:after {
     width: 100%;
     background: #fff;
-  }
+  } */
   
   /* .nav-item .active {
     color: #fff;

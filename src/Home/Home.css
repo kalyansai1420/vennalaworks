@@ -1,7 +1,7 @@
 
 .home{
-    background-color: #333;
-    background: radial-gradient(82.41% 82.41% at 50% 50%, #373839 2.61%, #18191A 75.24%);
+    /* background-color: #333;
+    background: radial-gradient(82.41% 82.41% at 50% 50%, #373839 2.61%, #18191A 75.24%); */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -40,6 +40,8 @@
 }
 .home__right h1{
     font-size: 4em;
+        font-weight: 500;    
+
 }
 .home__right h3{
     font-size: 2em;
@@ -71,7 +73,7 @@
     .home__right{
         padding-left: 50px;
     }
-    .home__right h1{
+    .home__right h1 ,.ske_home_h1{
         font-size: 2em;
         text-align: center;
         
@@ -79,4 +81,5 @@
     .home__right h3{
         font-size: 1em;
     }
+
 }

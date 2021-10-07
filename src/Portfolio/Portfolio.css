@@ -1,5 +1,5 @@
 .list{
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     /* width: 100vw;
     height: 80vh;
@@ -12,39 +12,37 @@
     padding-bottom: 50px; 
     width: 100%;
     margin: 0 auto;
-    padding-top: 50px;
     /* display: flex;
     flex-direction:row; */
     
 }
-.title{
-    margin-bottom: 50px;
+.list .port-title{
+    margin-bottom: 25px;
     font-size: 2em;
     margin-left: 100px;
-
+    font-weight: 600;  
 }
 .cards{
     /* background-color: blue; */
-    /* margin-left: 100px;
-    margin-right: 100px; */
+   
+    width: 90%;
     margin: 0 auto;
-    width: 100%;
-
-
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /* justify-content: space-around; */
-    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
     height: fit-content;
-    justify-content: center;
+    justify-content: space-around;
+    /* column-gap: 50px; */
    
     /* width: 85% ; */
     /* margin: 0 auto; */
     /* border: 10px solid #fff; */
     
-    align-items: center;
+    /* align-items: center;
+    align-content: center; */
 }
 .port-btn {
     /* text-align: center; */
@@ -86,7 +84,11 @@
         height: fit-content;
         /* border: 2px solid #fff; */
         width: 100vw;
-
+    }
+    .list .port-title{
+        margin-left: 0px;
+        text-align: center;
+      
     }
     
     
